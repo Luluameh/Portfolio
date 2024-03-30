@@ -44,7 +44,7 @@ const ContactForm = () => {
       () => {
         console.log("SUCCESS!");
         setMessageStatus(
-          "Message sent successfully. We will respond as soon as possible."
+          "Message sent successfully.😊 We will respond as soon as possible."
         );
         // Clear input fields
         setFormState({
@@ -56,7 +56,7 @@ const ContactForm = () => {
       },
       (error) => {
         console.log("FAILED...", error.text);
-        setMessageStatus("Failed to send message. Please try again later.");
+        setMessageStatus("Failed to send message.🥺 Please try again later.");
       }
     );
   };
