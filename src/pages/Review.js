@@ -20,7 +20,7 @@ function Review() {
       name: "Jane Smith",
       profession: "Product Manager",
       image: "https://via.placeholder.com/150",
-      review: "We've added an onClick event handler to the container div of the reviews. Inside the event handler, we check the position where the click occurred. If it's on the left half of the screen we trigger a swipe to the left (previous review) and if it's on the right half, we trigger a swipe to the right (next review).",
+      review: "We've added an onClick event handler to the container div of the reviews. Inside the event handler, we check the position where the click occurred. .",
     },
     {
       name: "Alice Johnson",
@@ -41,7 +41,7 @@ function Review() {
         transition={{ duration: 0.5 }}
         ref={ref}
       >
-        <div className="bg-red-600 w-full p-20">
+        <div className="bg-red-600 w-full p-20 ">
           <div className="flex flex-col items-center">
             <div className="text-center text-lg mb-4 border-2 bg-white rounded-md md:rounded-full w-85 p-20 relative">
               <img
@@ -49,7 +49,7 @@ function Review() {
                 alt={reviews[currentReviewIndex].name}
                 className="w-20 h-20 rounded-full m-auto absolute -top-9 left-0 right-0"
               />
-              <div className="text-center text-lg mb-4 text-gray-400 leading-5">
+              <div className="text-center text-base mb-4 text-gray-400 leading-5  ">
                 {reviews[currentReviewIndex].review}
               </div>
               <div className="text-center">

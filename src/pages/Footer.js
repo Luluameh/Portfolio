@@ -20,11 +20,11 @@ const Footer = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">
               123 Street, New York, USA
             </h3>
-            <div className="footer-menu flex justify-center">
+            <div className="footer-menu flex flex-col md:flex-row justify-center">
               <p className="text-xl font-semibold text-white mx-2">
                 +234 08029496750
               </p>
-              <p className="w-px h-6 bg-white mb-6"></p>
+              <p className="hidden md:block w-px h-6 bg-white mb-6"></p>
 
               <p className="text-xl font-semibold text-white mx-2">
                 info@example.com

@@ -41,7 +41,7 @@ const Experience = () => {
 
   return (
     <>
-      <div className=" md:px-20 w-full">
+      <div className=" md:px-20 w-full ">
         <div className="container">
           <header className="section-header text-center">
             <motion.div

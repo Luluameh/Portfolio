@@ -5,10 +5,13 @@ import Contact  from "./Contact";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const Portfolio = () => {
-    const { ref, inView } = useInView({
-      triggerOnce: true, // Ensures animation triggers only once
-      threshold: 0.5, // Adjust this threshold based on your preference
-    });
+   const { ref: headerRef, inView: headerInView } = useInView({
+     triggerOnce: true,
+     threshold: 0.5,
+   });
+
+  
+
 
   const [activeFilter, setActiveFilter] = useState("*");
 
@@ -67,11 +70,13 @@ const Portfolio = () => {
         <div className="container mx-auto pb-12">
           <motion.div
             className="box"
-            ref={ref}
+            ref={headerRef}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={
-              inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
-            } // Animation based on inView state
+              headerInView
+                ? { opacity: 1, scale: 1 }
+                : { opacity: 0, scale: 0.5 }
+            }
             transition={{
               duration: 2,
               ease: [0, 0.71, 0.2, 1.01],
@@ -151,9 +156,8 @@ const Portfolio = () => {
           {/**calling the main portfolio */}
           <motion.div
             initial={{ y: 100, opacity: 0 }}
-            animate={inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }} // Animate only when in view
+            animate={ { y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            ref={ref}
           >
             <div className="row portfolio-container flex flex-wrap gap-10 justify-center">
               {filteredItems.map((item) => (

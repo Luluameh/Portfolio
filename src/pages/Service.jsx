@@ -59,7 +59,7 @@ const { ref, inView } = useInView({
             ref={ref}
           >
             <div
-              className="grid grid-cols-1 md:grid-cols-2 gap-6 wow fadeInUp font-poppins "
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 wow fadeInUp font-poppins p-8 mx-10 "
               data-wow-delay="0.2s"
             >
               {services.map((service) => (

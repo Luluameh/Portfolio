@@ -150,14 +150,14 @@ const Navbar = () => {
           <div className="-mr-0 flex md:hidden">
             <button
               onClick={toggleNavbar}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-white focus:outline-none focus:bg-gray-700 focus:text-white"
             >
               <svg
                 className="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="white"
                 aria-hidden="true"
               >
                 <path
