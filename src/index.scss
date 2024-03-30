@@ -1,0 +1,264 @@
+// --- css variables --- //
+:root {
+  --black: #041a2f;
+  --white: #ffffff;
+  --primary: #eb3b4d;
+}
+
+// --- styling --- //
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+$font-family: 'Poppins', sans-serif ;
+
+// config
+$max-width: 992px;
+
+html,
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.button {
+  position: relative;
+  border: 0;
+  transition: 0.5s;
+  z-index: 1;
+  min-width: 15rem;
+
+  font-size:1rem;
+  line-height: 1;
+ font-family: $font-family;
+   cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--white);
+  color: var(--white);
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+
+  &.--glow {
+    &:hover {
+      background: var(--primary);
+      box-shadow: 0 0 5px var(--primary), 0 0 25px var(--primary);
+    }
+  }
+  &.--pulse {
+    &:hover {
+      animation: pulse 1.5s infinite;
+    }
+  }
+  &.--door {
+    &:hover {
+      box-shadow: inset -7.5rem 0 0 0 var(--primary),
+        inset 7.5rem 0 0 0 var(--primary);
+    }
+  }
+  &.--shutter {
+    &:after {
+      height: 0;
+      width: 100%;
+      left: 0;
+      background: var(--primary);
+      transition: 0.5s;
+    }
+    &.--down {
+      &:after {
+        top: 0;
+      }
+    }
+    &.--up {
+      &:after {
+        bottom: 0;
+      }
+    }
+    &:hover {
+      &:after {
+        height: 100%;
+      }
+    }
+  }
+  &.--double {
+    &:hover {
+      box-shadow: 5px 5px 0 var(--primary);
+    }
+  }
+  &.--shine {
+    overflow: hidden;
+    &:after {
+      height: 100%;
+      width: 0;
+      left: -25%;
+      top: 0;
+      background: var(--primary);
+      transform: skew(50deg);
+      transform-origin: top left;
+      transition: 0.5s;
+    }
+    &:hover {
+      &:after {
+        width: 125%;
+      }
+    }
+  }
+  &.--move {
+    &:after {
+      height: 100%;
+      width: 0;
+      top: 0;
+      background: var(--primary);
+      transition: 0.5s;
+    }
+    &.--left {
+      &:after {
+        left: 0;
+      }
+    }
+    &.--right {
+      &:after {
+        right: 0;
+      }
+    }
+    &.--left-right {
+      &:after {
+        right: 0;
+      }
+      &:hover {
+        &:after {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+    &.--right-left {
+      &:after {
+        left: 0;
+      }
+      &:hover {
+        &:after {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+  &.--border {
+    border: 2px solid transparent;
+    &:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: transparent;
+    }
+  }
+  &.--draw-border {
+    &:before,
+    &:after {
+      box-sizing: inherit;
+      border: 2px solid transparent;
+      width: 0;
+      height: 0;
+    }
+    // right & top border
+    &:before {
+      top: 0;
+      left: 0;
+    }
+    // left & bottom border
+    &:after {
+      bottom: 0;
+      right: 0;
+    }
+    &:hover {
+      color: var(--primary);
+      background: transparent;
+
+      &:before,
+      &:after {
+        width: 100%;
+        height: 100%;
+      }
+      &:before {
+        border-top-color: var(--primary);
+        border-right-color: var(--primary);
+        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; // wait for width
+      }
+      &:after {
+        border-bottom-color: var(--primary);
+        border-left-color: var(--primary);
+        transition: border-color 0s ease-out 0.5s,
+          // wait for :before
+          width 0.25s ease-out 0.5s,
+          height 0.25s ease-out 0.75s; // wait for width
+      }
+    }
+  }
+  &.--underline {
+    &:after {
+      box-sizing: inherit;
+      width: 0;
+      height: 100%;
+      border-bottom: 4px solid var(--primary);
+      bottom: 0;
+      transition: 0.5s;
+    }
+    &.--left {
+      &:after {
+        left: 0;
+      }
+    }
+    &.--right {
+      &:after {
+        right: 0;
+      }
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+    }
+    &.--center {
+      &:after {
+        right: 50%;
+        left: 50%;
+      }
+      &:hover {
+        &:after {
+          right: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+   /* For smaller screens that i added  */
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem; /* Adjust font size for smaller screens */
+    min-width: 9rem; /* Adjust min-width for smaller screens */
+  }
+}
+
+// --- animations --- //
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 var(--black);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--black);
+  }
+  100% {
+    box-shadow: 0 0 0 var(--black);
+  }
+}
