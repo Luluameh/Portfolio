@@ -9,8 +9,8 @@ const Home = () => {
     "Web Designer",
     "Web Developer",
     "Front End Developer",
-    "Apps Designer",
-    "Apps Developer",
+    "wordpress Developer",
+    "React Developer",
   ];
   const [index, setIndex] = useState(0);
 
@@ -61,7 +61,7 @@ const Home = () => {
                       Hire Me
                     </a>
                     <a
-                      href="/contact"
+                      href="/"
                       className="btn bg-transparent border border-white text-white px-6 py-2 md:px-8 md:py-3 font-semibold rounded-full shadow-lg hover:bg-white hover:text-red-600 transition duration-300 ease-in-out sm:text-sm"
                     >
                       Contact Me

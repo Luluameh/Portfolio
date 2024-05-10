@@ -94,7 +94,7 @@ const { ref, inView } = useInView({
                       <h3 className="text-md md:text-xl font-semibold mb-2 ">
                         {service.title}
                       </h3>
-                      <p className="text-sm md:text-base">
+                      <p className="text-sm md:text-sm">
                         {service.description}
                       </p>
                     </div>
@@ -120,7 +120,7 @@ const services = [
     icon: <FaLaptop size={60} className="text-red-500  text-sm md:text-md" />,
     title: "Web Design",
     description:
-      "Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non.",
+      "Creating visually appealing and user-friendly interfaces that engage visitors and reflect your brand identity effectively.",
   },
   {
     id: 2,
@@ -129,21 +129,21 @@ const services = [
     ),
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non.",
+      "Crafting customized and responsive websites tailored to your needs, ensuring seamless functionality and user experience.",
   },
   {
     id: 3,
     icon: <FaAndroid size={60} className="text-red-500 text-sm md:text-md" />,
     title: "SEO optimizition",
     description:
-      "Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non.",
+      "Optimizing websites to improve visibility and ranking on search engines, driving organic traffic and enhancing online presence.",
   },
   {
     id: 4,
     icon: <FaApple size={60} className="text-red-500  text-sm  md:text-md" />,
-    title: "Apps Development",
+    title: "Apps Development ",
     description:
-      "Lorem ipsum dolor sit amet elit. Phase nec preti mi. Curabi facilis ornare velit non.",
+      "Coming soon! Stay tuned for innovative mobile applications designed to revolutionize user experiences and enhance accessibility.",
   },
 ];
 
