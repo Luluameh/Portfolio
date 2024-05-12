@@ -57,8 +57,8 @@ function Review() {
         ref={ref}
       >
         <div className="bg-red-600 w-full p-20">
-          <div className="flex flex-col items-center">
-            <div className="text-center text-lg mb-4 border-2 bg-white rounded-md md:rounded-full w-85 p-20 relative">
+          <div className="flex flex-col items-center ">
+            <div className="text-center text-lg mb-4 border-2 bg-white rounded-md md:rounded-full w-85 p-20 relative pl-2 pr-2">
               <img
                 src={reviews[currentReviewIndex].image}
                 alt={reviews[currentReviewIndex].name}
@@ -105,7 +105,7 @@ function Review() {
         >
           <img
             src={zoomedImage}
-            alt="Zoomed Image"
+            alt="Zoomed "
             className="max-w-3/4 max-h-3/4 object-contain"
           />
         </div>

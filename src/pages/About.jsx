@@ -13,7 +13,7 @@ const About = () => {
 
   return (
     <>
-      <div className="container  ">
+      <div className="container  pl-6 pr-6 md:p-2">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 100, opacity: 0 }} // Animate only when in view
@@ -58,8 +58,7 @@ const About = () => {
                     <p className="">Web Design</p>
                     <p>85%</p>
                   </div>
-                  <ProgressBar ref={ref}  percentage={85} />
-
+                  <ProgressBar ref={ref} percentage={85} />
                 </div>
                 <div className="skills mb-4 ">
                   <div className="skill-name flex justify-between items-center text-gray-400 text-lg">
@@ -91,7 +90,7 @@ const About = () => {
 
               <a
                 href="/"
-                className="btn bg-red-500 text-white px-4 py-2 rounded-full inline-block mt-4"
+                className="btn bg-red-500 text-white px-4 py-2 rounded-full inline-block mt-4 ml-4"
               >
                 Learn More
               </a>

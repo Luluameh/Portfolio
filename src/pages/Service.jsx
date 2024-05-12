@@ -47,7 +47,7 @@ const { ref, inView } = useInView({
                 <p className="-semibold text-gray-400"> WHAT WE DO</p>
               </div>
 
-              <h2 className="text-4xl md:text-4xl font-bold pb-3 text-gray-700">
+              <h2 className="text-4xl md:text-4xl font-bold pb-3 text-gray-700  pl-6 pr-6 md:p-0">
                 Awesome Quality Services
               </h2>
             </motion.div>
@@ -77,7 +77,7 @@ const { ref, inView } = useInView({
                     <div
                       className={`${
                         serviceId === service.id &&
-                        " transition-transform duration-[0.5s] transform scale-150 ease-in-out "
+                        " transition-transform duration-[0.5s] transform scale-150 ease-in-out  "
                       }`}
                     >
                       {service.icon}
@@ -94,7 +94,7 @@ const { ref, inView } = useInView({
                       <h3 className="text-md md:text-xl font-semibold mb-2 ">
                         {service.title}
                       </h3>
-                      <p className="text-sm md:text-sm">
+                      <p className="text-sm md:text-sm pr-2 pl-2 ">
                         {service.description}
                       </p>
                     </div>

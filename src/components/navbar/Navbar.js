@@ -72,16 +72,16 @@ const Navbar = () => {
       className={`bg-${isScrolled ? "white" : "red-600"}
        fixed w-full z-20 border-b-2 border-dotted border-white transition-colors duration-300`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-10 h-16">
-          <div className="flex items-center space-x-4 ml-5 ">
+          <div className="flex items-center space-x-4 ml-5 pl-4 pr-4 md:p-0 ">
             <Link
               to="/"
               className={`text-${
                 isScrolled ? "red-600" : "white"
               } font-bold transition-colors duration-300 `}
             >
-              Your Logo
+              Lucy
             </Link>
           </div>
           <div className="hidden md:block    ">
@@ -150,7 +150,7 @@ const Navbar = () => {
           <div className="-mr-0 flex md:hidden">
             <button
               onClick={toggleNavbar}
-              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-white focus:outline-none focus:bg-gray-700 focus:text-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-white focus:outline-none focus:bg-gray-700 focus:text-white pl-3 pr-3 m"
             >
               <svg
                 className="h-6 w-6"
@@ -176,7 +176,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-white">
+        <div className="md:hidden bg-white w-full">
           <div className="flex flex-col px-2 pt-2 pb-3 sm:px-3">
             <button>
               <Link

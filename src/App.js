@@ -4,7 +4,7 @@ import Footer from "./pages/Footer";
 import ScrollToTopButton from "./components/ScrollButton";
 function App() {
   return (
-    <div className="min-h-screen flex flex-col relative">
+    <div className="min-h-screen flex flex-col relative  md:px-0">
       <div id="home">
         <Home />
       </div>

@@ -41,8 +41,8 @@ const Experience = () => {
 
   return (
     <>
-      <div className=" md:px-20 w-full ">
-        <div className="container">
+      <div className=" md:px-20 w-full  pl-6 pr-6 md:p-0 ">
+        <div className="container  ">
           <header className="section-header text-center">
             <motion.div
               className="box"
@@ -78,7 +78,7 @@ const Experience = () => {
           </header>
           <div className="experience" id="experience">
             <div className="container">
-              <div className="timeline">
+              <div className="timeline pr-3 pl-3 md:p-0">
                 <motion.div
                   ref={ref}
                   initial={{ opacity: 0, scale: 0.5 }}
