@@ -1,33 +1,32 @@
-// ProgressBar.js
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const ProgressBar = ({ percentage }) => {
-  const { ref, inView } = useInView({
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.2,
   });
+  const [width, setWidth] = useState(0);
 
-  const progressVariants = {
-    hidden: { width: "0%" },
-    visible: { width: `${percentage}%` },
-  };
+  useEffect(() => {
+    if (inView) {
+      setWidth(percentage);
+      controls.start({
+        width: `${percentage}%`,
+        transition: { duration: 1.5, ease: "easeOut" }
+      });
+    }
+  }, [controls, inView, percentage]);
 
   return (
-    <div ref={ref} className="relative h-2 bg-gray-400 rounded-full">
+    <div ref={ref} className="w-full bg-gray-200 rounded-full h-2.5 mb-4 overflow-hidden">
       <motion.div
-        className="absolute h-full bg-red-500 rounded-full"
-        variants={progressVariants}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        transition={{ duration: 1 }}
-      >
-        <div
-          className="h-full bg-red-500 rounded-full"
-          style={{ width: `${percentage}%` }}
-        ></div>
-      </motion.div>
+        initial={{ width: 0 }}
+        animate={controls}
+        className="bg-red-500 h-2.5 rounded-full"
+      />
     </div>
   );
 };

@@ -108,7 +108,7 @@ const Navbar = () => {
                   isScrolled ? "text-red-600" : "text-black"
                 } px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300`}
               >
-                Service
+               Expertise
               </button>
               <button
                 onClick={handlePortfolioClick}
