@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="container mx-auto">
           <div className="footer-info text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
-              Ameh Lucy Ajumi
+              Ameh Lucy Joy
             </h2>
             <h3 className="text-xl md:text-2xl font-medium text-white mb-6">
               Front-End Developer

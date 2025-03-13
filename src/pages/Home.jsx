@@ -46,7 +46,7 @@ const Home = () => {
                 <div className="hero-text p-12 md:p-0">
                   <p className="text-lg text-white font-semibold">I'm</p>
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                    Ameh Lucy Ajumi
+                    Ameh Lucy Joy
                   </h1>
                   <h2 className="text-md md:text-2xl text-white font-semibold mb-4 pb-4 ">
                     {text}

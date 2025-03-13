@@ -52,7 +52,7 @@ const Experience = () => {
 
   return (
     <>
-      <div className="md:px-20 w-full pl-6 pr-6 md:p-0 py-12 bg-gray-50">
+      <div className="md:px-20 w-full pl-6 pr-6 md:p-0 py-12 bg-gray-50" id='exprience'>
         <div className="container mx-auto">
           <header className="section-header text-center mb-16">
             <motion.div
