@@ -13,7 +13,6 @@ const Service = () => {
     threshold: 0.3,
   });
 
-  // Updated services based on your resume and skills
   const services = [
     {
       id: 1,

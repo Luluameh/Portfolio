@@ -6,7 +6,7 @@ import medcon from "../Assests/medcon.png";
 import weather from "../Assests/weather.png";
  import tukshopVendor from "../Assests/vendor.png"; 
  import tukshopAdmin from "../Assests/admin.png"; 
-// import referApro from "../Assests/referapro.png"; 
+import referApro from "../Assests/referapro.png"; 
  import paperdazAdmin from "../Assests/paperdaz.png"; 
 
 import Contact from "./Contact";
@@ -72,7 +72,7 @@ const Portfolio = () => {
       id: 3,
       category: "filter-1",
       title: "ReferAPro Platform",
-      image: eyewitnex, 
+      image: referApro , 
       link: "https://referapro.com", 
       description: "Enhanced user interface with ReactJS and Material-UI, focusing on responsive design.",
       technologies: ["React", "Material-UI", "Responsive Design"],
