@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../index.scss";
 import Exprience from "./Exprience";
-import { FaReact, FaCode, FaServer, FaMobileAlt, FaChartBar } from "react-icons/fa";
+import { FaReact,  FaServer, FaMobileAlt, FaChartBar } from "react-icons/fa";
 import { SiTypescript, SiRedux } from "react-icons/si";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";

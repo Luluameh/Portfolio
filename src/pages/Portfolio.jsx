@@ -1,16 +1,13 @@
 import React, { useState } from "react";
-import lulu from "../Assests/lulu pic.jpeg";
-import profile from "../Assests/profile.jpeg";
 import country from "../Assests/country.png";
 import eyewitnex from "../Assests/eyewitnex.png";
 import insureclever from "../Assests/insureclever.png";
 import medcon from "../Assests/medcon.png";
 import weather from "../Assests/weather.png";
-// You'll need to add these images to your assets folder
-// import tukshopVendor from "../Assests/tukshop-vendor.png"; 
-// import tukshopAdmin from "../Assests/tukshop-admin.png"; 
+ import tukshopVendor from "../Assests/vendor.png"; 
+ import tukshopAdmin from "../Assests/admin.png"; 
 // import referApro from "../Assests/referapro.png"; 
-// import paperdazAdmin from "../Assests/paperdaz.png"; 
+ import paperdazAdmin from "../Assests/paperdaz.png"; 
 
 import Contact from "./Contact";
 import ProjectModal from "../components/ProjectModal"
@@ -45,8 +42,8 @@ const Portfolio = () => {
       id: 1,
       category: "filter-1",
       title: "TukShop Vendor Website",
-      image: eyewitnex, // Replace with actual image when available
-      link: "https://tukshop.com/vendor", // Update with actual URL
+      image: tukshopVendor, 
+      link: "https://tukshop.com/vendor", 
       description: "Intuitive vendor interface with dynamic order timelines and Google Maps integration.",
       technologies: ["React", "TypeScript", "Mantine UI", "Axios", "React Query"],
       features: [
@@ -60,8 +57,8 @@ const Portfolio = () => {
       id: 2,
       category: "filter-1",
       title: "TukShop SuperAdmin Dashboard",
-      image: eyewitnex, 
-      link: "https://admin.tukshop.com", // Update with actual URL
+      image: tukshopAdmin, 
+      link: "https://admin.tukshop.com", 
       description: "Advanced analytics dashboard with interactive data visualization and real-time notifications.",
       technologies: ["React", "TypeScript", "Mantine UI", "Recharts", "Storybook"],
       features: [
@@ -75,8 +72,8 @@ const Portfolio = () => {
       id: 3,
       category: "filter-1",
       title: "ReferAPro Platform",
-      image: eyewitnex, // Replace with actual image when available
-      link: "https://referapro.com", // Update with actual URL
+      image: eyewitnex, 
+      link: "https://referapro.com", 
       description: "Enhanced user interface with ReactJS and Material-UI, focusing on responsive design.",
       technologies: ["React", "Material-UI", "Responsive Design"],
       features: [
@@ -90,8 +87,8 @@ const Portfolio = () => {
       id: 4,
       category: "filter-1",
       title: "Paperdaz Admin Portal",
-      image: eyewitnex, // Replace with actual image when available
-      link: "https://admin.paperdaz.com", // Update with actual URL
+      image: paperdazAdmin, 
+      link: "https://admin.paperdaz.com/login", 
       description: "Admin website developed using React and TypeScript with scalable component architecture.",
       technologies: ["React", "TypeScript", "Component Architecture"],
       features: [
